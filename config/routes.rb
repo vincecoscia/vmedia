@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'hello_world', to: 'hello_world#index'
   get 'posts/new'
   get 'posts/index'
   get 'posts/show'

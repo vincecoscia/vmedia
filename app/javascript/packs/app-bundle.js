@@ -1,5 +1,5 @@
 import ReactOnRails from 'react-on-rails';
-// import Player from '../bundles/Player/components/Player'
+import App from '../bundles/App/components/App'
 // import Scroll from '../bundles/Scroll/components/Scroll'
 // import Dashboard from '../bundles/Dashboard/components/Dashboard'
 
