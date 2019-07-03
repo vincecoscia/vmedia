@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  get 'posts/new'
+  get 'posts/index'
+  get 'posts/show'
   devise_for :admins
+
+  resources :posts
 
   root 'pages#index'
 
