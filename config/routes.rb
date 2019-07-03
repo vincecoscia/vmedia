@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  get 'about', to: 'pages#about'
+  get '*path', to: 'pages#index'
+  # Above code routes all paths to home page - this leaves react in charge of routes
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
