@@ -88,18 +88,22 @@ export default function Navbar() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <StyledMenuItem>
-              <ListItemIcon>
-                <HomeIcon />
-              </ListItemIcon>
-              <ListItemText primary="Home" />
-            </StyledMenuItem>
-            <StyledMenuItem>
-              <ListItemIcon>
-                <PhotoIcon />
-              </ListItemIcon>
-              <ListItemText primary="Photos" />
-            </StyledMenuItem>
+            <Link to="/">
+              <StyledMenuItem>
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                <ListItemText primary="Home" />
+              </StyledMenuItem>
+            </Link>
+            <Link to="/photos">
+              <StyledMenuItem>
+                <ListItemIcon>
+                  <PhotoIcon />
+                </ListItemIcon>
+                <ListItemText primary="Photos" />
+              </StyledMenuItem>
+            </Link>
             <StyledMenuItem>
               <ListItemIcon>
                 <PublicIcon />
