@@ -112,7 +112,7 @@ export default function Navbar() {
             </StyledMenuItem>
           </StyledMenu>
           <Typography variant="h6" className={classes.title}>
-            VMedia
+            vmedia
           </Typography>
           {/* <Button color="inherit">Login</Button> */}
         </Toolbar>
