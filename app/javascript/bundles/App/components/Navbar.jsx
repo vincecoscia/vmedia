@@ -60,7 +60,7 @@ const StyledMenuItem = withStyles(theme => ({
   },
 }))(MenuItem);
 
-export default function Navbar() {
+const Navbar = (props) => {
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -96,12 +96,12 @@ export default function Navbar() {
                 <ListItemText primary="Home" />
               </StyledMenuItem>
             </Link>
-            <Link to="/photos">
+            <Link to="/albums">
               <StyledMenuItem>
                 <ListItemIcon>
                   <PhotoIcon />
                 </ListItemIcon>
-                <ListItemText primary="Photos" />
+                <ListItemText primary="Albums" />
               </StyledMenuItem>
             </Link>
             <StyledMenuItem>
@@ -114,6 +114,7 @@ export default function Navbar() {
           <Typography variant="h6" className={classes.title}>
             vmedia
           </Typography>
+
           {/* <Button color="inherit">Login</Button> */}
         </Toolbar>
       </AppBar>
@@ -121,3 +122,4 @@ export default function Navbar() {
   )
 }
 
+export default Navbar;

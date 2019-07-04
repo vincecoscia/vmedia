@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :albums
   get 'hello_world', to: 'hello_world#index'
   get 'posts/new'
   get 'posts/index'
@@ -9,7 +10,11 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  get '*path', to: 'pages#index'
+  get '/albums', to: 'pages#index'
+
+  # if current_user
+  #   get '*path', to: '/albums/new'
+  # end
   # Above code routes all paths to home page - this leaves react in charge of routes
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

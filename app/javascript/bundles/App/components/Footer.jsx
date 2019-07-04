@@ -1,6 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom'
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   footer: {
@@ -11,9 +13,15 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     bottom: 0,
   },
+  button: {
+    margin: theme.spacing(1),
+  },
+  input: {
+    display: 'none',
+  },
 }));
 
-export default function Footer() {
+const Footer = (props) =>  {
   const classes = useStyles();
   return (
     <div>
@@ -25,8 +33,23 @@ export default function Footer() {
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           Something here to give the footer a purpose!
         </Typography>
+
+        {props.logged_in == false ?
+        <a href="/admins/sign_in">
+          <Button variant="contained" className={classes.button}>
+            Admin
+          </Button>
+        </a>
+        :
+        <a data-method="delete" href="/admins/sign_out">
+          <Button variant="contained" className={classes.button}>
+            Sign Out
+          </Button>
+        </a>}
       </footer>
       {/* End footer */}
     </div>
   )
 }
+
+export default Footer
